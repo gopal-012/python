@@ -1,11 +1,1 @@
-.idea/
-.vscode/
-
-__pycache__/
-
-
-
-env/
-tmp/
-
-db.sqlite3
+node_modules

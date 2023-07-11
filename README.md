@@ -1,79 +1,44 @@
-# Simple Django Login and Registration
+### This repository is no longer maintained!
 
-An example of Django project with basic user functionality.
+**For the most up to date test app to get you started on Heroku, head on over to [`node-js-getting-started`](https://github.com/heroku/node-js-getting-started).**
 
-## Screenshots
+---
 
-| Log In | Create an account | Authorized page |
-| -------|--------------|-----------------|
-| <img src="./screenshots/login.png" width="200"> | <img src="./screenshots/create_an_account.png" width="200"> | <img src="./screenshots/authorized_page.png" width="200"> |
+# node-js-sample
 
-| Password reset | Set new password | Password change |
-| ---------------|------------------|-----------------|
-| <img src="./screenshots/password_reset.png" width="200"> | <img src="./screenshots/set_new_password.png" width="200"> | <img src="./screenshots/password_change.png" width="200"> |
+A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-## Functionality
+## Running Locally
 
-- Log in
-    - via username & password
-    - via email & password
-    - via email or username & password
-    - with a remember me checkbox (optional)
-- Create an account
-- Log out
-- Profile activation via email
-- Reset password
-- Remind a username
-- Resend an activation code
-- Change password
-- Change email
-- Change profile
-- Multilingual: English, French, Russian, Simplified Chinese and Spanish
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
-If you need dynamic URLs with the language code, check out https://github.com/egorsmkv/simple-django-login-and-register-dynamic-lang
-
-## Installing
-
-### Clone the project
-
-```bash
-git clone https://github.com/egorsmkv/simple-django-login-and-register
-cd simple-django-login-and-register
+```sh
+git clone git@github.com:heroku/node-js-sample.git # or clone your own fork
+cd node-js-sample
+npm install
+npm start
 ```
 
-### Install dependencies & activate virtualenv
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-```bash
-pip install poetry
+## Deploying to Heroku
 
-poetry install
-poetry shell
+```
+heroku create
+git push heroku master
+heroku open
 ```
 
-### Configure the settings (connection to the database, connection to an SMTP server, and other options)
+Alternatively, you can deploy your own copy of the app using the web-based flow:
 
-1. Edit `source/app/conf/development/settings.py` if you want to develop the project.
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-2. Edit `source/app/conf/production/settings.py` if you want to run the project in production.
+## Documentation
 
-### Apply migrations
+For more information about using Node.js on Heroku, see these Dev Center articles:
 
-```bash
-python source/manage.py migrate
-```
-
-### Collect static files (only on a production server)
-
-```bash
-python source/manage.py collectstatic
-```
-
-### Running
-
-#### A development server
-
-Just run this command:
-
-```bash
-python source/manage.py runserver
-```
+- [10 Habits of a Happy Node Hacker](https://blog.heroku.com/archives/2014/3/11/node-habits)
+- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
